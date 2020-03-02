@@ -1,0 +1,13 @@
+<div>
+<h2>Search Graduates</h2>
+<form action="/graduates" method="GET">
+<label>Name</label>
+<input type="text" name="name" value="<%= searchOptions.name %>">
+<button type="submit">Search</button>
+</form>
+</div>
+
+<br>
+<% graduates.forEach(graduate => { %>
+<div><%= graduate.name %></div>
+<% }) %>
