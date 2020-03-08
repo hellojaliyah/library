@@ -1,0 +1,10 @@
+<h2><%= graduate.name %></h2>
+<a href="/graduates/<%= graduate.id %>/edit">Edit</a>
+<%- include('../partials/deleteForm', 
+    { url:  `/graduates/${graduate.id}` }) %>
+    <% if (booksByGraduate.length > 0) { %>
+    <h2>Books By Graduate</h2>
+    <% booksByGraduate.forEach(book => { %>
+        <img height="150" width="100" src="<%= book.coverImagePath %>">
+        <% }) %>
+    <% } %>
